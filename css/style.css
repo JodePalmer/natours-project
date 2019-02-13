@@ -1,3 +1,24 @@
+/* Media Query Manager */
+/*
+
+0 - 600px             Phone
+
+600px - 900px         Tablet Portrait 
+
+900px - 1200px        Tablet Landscape
+
+1200px  - 1800px      Desktop   This is where our normal styles apply
+
+1800px +              Large Desktop
+
+
+$breakpoint argument choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+*/
 /* Colours */
 /* Grid */
 /* Font */
@@ -37,7 +58,20 @@
   box-sizing: inherit; }
 
 html {
-  font-size: 62.5%; }
+  font-size: 62.5%;
+  /*This defines what 1 rem is */ }
+  @media (max-width: 75em) {
+    html {
+      font-size: 56.25%;
+      /* 1rem = 9px, 9/16 = 56.25%  */ } }
+  @media (max-width: 56.25em) {
+    html {
+      font-size: 50%;
+      /* 1rem = 8px, 8/16 = 50%  */ } }
+  @media (min-width: 112.5em) {
+    html {
+      font-size: 75%;
+      /* 1rem = 12px, 12/16 = 75%  */ } }
 
 body {
   box-sizing: border-box; }
